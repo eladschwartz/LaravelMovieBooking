@@ -15,15 +15,10 @@ class CreateMoviePricesTable extends Migration
     {
         Schema::create('movie_prices', function (Blueprint $table) {
             $table->increments('id');
-            $table->UnsignedInteger('movie_id');
             $table->integer('adult');
             $table->integer('child');
             $table->timestamps();
         });
-
-        Schema::table('movie_prices', function($table) {
-         $table->foreign('movie_id')->references('movie_id')->on('movies');
-     });
 
     }
 

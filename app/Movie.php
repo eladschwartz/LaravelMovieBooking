@@ -14,7 +14,7 @@ class Movie extends Model
 
 	 public function genre()
     {
-        return $this->hasOne(Genre::class, 'movie_id');
+        return $this->hasOne(Genre::class, 'id','genre_id');
     }
 
      public function screening()

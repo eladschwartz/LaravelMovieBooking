@@ -17,7 +17,6 @@ class CreateMoviesTable extends Migration
             $table->unsignedInteger('movie_id');
             $table->unsignedInteger('genre_id');
             $table->unsignedInteger('price_id');
-            $table->foreign('genre_id')->references('id')->on('geners');
             $table->foreign('price_id')->references('id')->on('movie_prices');
             $table->string('title');
             $table->float('rating');
